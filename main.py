@@ -39,5 +39,12 @@ while game_on:
     if (ball.xcor()<-315) and (ball.distance(lpaddle)<60):
         ball.deflect()
 
+    #detect ball out of bounds
+    if ball.xcor() > 350:
+        ball.respawn()
+    
+    if ball.xcor() < -350:
+        ball.respawn()
+
 
 screen.exitonclick()

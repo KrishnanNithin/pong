@@ -5,12 +5,16 @@ class Ball(Turtle):
     def __init__(self):
         super().__init__()
         self.penup()
-        self.goto(0, 0)
+        self.goto(0,0)
         self.color("white")
         self.shape("circle")
         self.x_move = 10
         self.y_move = 10
     
+    def respawn(self):
+        self.goto(0, 0)
+        self.x_move *= -1
+
     def move(self):
         self.goto(self.xcor()+self.x_move, self.ycor()+self.y_move)
     
