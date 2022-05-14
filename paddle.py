@@ -1,4 +1,4 @@
-from gzip import _PaddedFile
+
 from turtle import Turtle, Screen
 
 
